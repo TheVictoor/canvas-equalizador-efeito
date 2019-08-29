@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #333;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <canvas></canvas>
+    </div>
+    <script>
+        function setSizeContainer(){
+            let container  = document.querySelector( ".container" );
+            container.style.width = `${window.innerWidth}px`;
+            container.style.height = `${window.innerHeight}px`;
+        }
+
+        window.onload = function(){
+            setSizeContainer();
+        }
+
+        window.onresize = function(){
+            setSizeContainer();
+        }
+    </script>
+    <script src="ondas.js"></script>
+</body>
+</html>
